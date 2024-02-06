@@ -54,7 +54,7 @@ def process_view(request):
             target_skin = extractSkin(resized_target, refined_target_mask)
 
             dominant_color = extractDominantColor(cv2.cvtColor(source_skin, cv2.COLOR_BGR2RGB), number_of_colors = 5, hasThresholding = True)
-            adjusted_color = adjust_hsv_dominance(dominant_color, hsv_adjust = 2)
+            adjusted_color = adjust_hsv_dominance(dominant_color, hsv_adjust = 1)
 
             
             target_skin_result = applyAdjustedColorToSkinRegion(target_skin, refined_target_mask, adjusted_color)
