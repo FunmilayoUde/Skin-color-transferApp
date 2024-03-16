@@ -4,7 +4,7 @@ import torch
 import cv2
 import numpy as np
 from torchvision import transforms
-from .bisenetv2 import BiSeNetV2
+from bisenetv2 import BiSeNetV2
 
 def load_skin_segmentation_model(model_weight_path: str) -> BiSeNetV2:
     model = BiSeNetV2(['skin'])
